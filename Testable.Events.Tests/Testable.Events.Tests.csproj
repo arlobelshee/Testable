@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Contract.Annotations, Version=8.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Contract.Annotations.8.2.1.0\lib\net45\Contract.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="FluentAssertions">
       <HintPath>..\packages\FluentAssertions.2.2.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
@@ -47,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Testable.Events\*.cs">
+      <Link>testable_events\%(FileName)</Link>
+    </Compile>
     <Compile Include="testable_events\Testability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
