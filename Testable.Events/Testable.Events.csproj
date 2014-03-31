@@ -14,6 +14,7 @@
     <OutputType>Library</OutputType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NugetVersionName>net45\</NugetVersionName>
     <RestorePackages>false</RestorePackages>
   </PropertyGroup>
   <ItemGroup Condition=" '$(FrameworkSpecific)' == '' ">
@@ -27,11 +28,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Contract.Annotations">
-      <HintPath>..\packages\Contract.Annotations.8.2.1.0\lib\$(NugetVersionName)Contract.Annotations.dll</HintPath>
+      <HintPath>..\packages\Contract.Annotations.8.2.1.0\lib\$(NugetVersionName)\Contract.Annotations.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Event.cs" />
   </ItemGroup>
   <ItemGroup Condition="'$(FrameworkSpecific)' == ''">
     <Compile Include="Properties\AssemblyInfo.cs" />
