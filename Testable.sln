@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testable.Events.portable-ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testable.Events.windows8", "Testable.Events\Testable.Events.windows8.csproj", "{08157754-F8F2-487F-AC13-011A024B2E2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testable.Events.Tests", "Testable.Events.Tests\Testable.Events.Tests.csproj", "{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,16 @@ Global
 		{08157754-F8F2-487F-AC13-011A024B2E2E}.Release|x64.Build.0 = Release|x64
 		{08157754-F8F2-487F-AC13-011A024B2E2E}.Release|x86.ActiveCfg = Release|x86
 		{08157754-F8F2-487F-AC13-011A024B2E2E}.Release|x86.Build.0 = Release|x86
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Release|x64.ActiveCfg = Release|Any CPU
+		{2E3F1A8D-D2A8-4B83-9998-F96C5724EBF9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
