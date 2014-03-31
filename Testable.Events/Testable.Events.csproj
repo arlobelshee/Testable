@@ -7,14 +7,15 @@
     <AssemblyName>Testable.Events</AssemblyName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <NugetVersionName Condition=" '$(NugetVersionName)' == '' ">net20\</NugetVersionName>
+    <NugetVer>net45</NugetVer>
+    <NugetVer Condition=" '$(NugetVersionName)' != '' ">$(NugetVersionName)</NugetVer>
+    <NugetVer Condition=" '$(NugetVersionName)' == '' ">net20</NugetVer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(FrameworkSpecific)' == '' ">
     <ProjectGuid>{9BED67F6-5BF9-4838-9574-AFE226B48FEA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NugetVersionName>net45\</NugetVersionName>
     <RestorePackages>false</RestorePackages>
   </PropertyGroup>
   <ItemGroup Condition=" '$(FrameworkSpecific)' == '' ">
@@ -28,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Contract.Annotations">
-      <HintPath>..\packages\Contract.Annotations.8.2.1.0\lib\$(NugetVersionName)\Contract.Annotations.dll</HintPath>
+      <HintPath>..\packages\Contract.Annotations.8.2.1.0\lib\$(NugetVer)\Contract.Annotations.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
