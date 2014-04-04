@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>$title$</title>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+		<licenseUrl>http://www.opensource.org/licenses/mit-license</licenseUrl>
+		<projectUrl>https://github.com/arlobelshee/Testable</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>$description$</description>
+		<releaseNotes></releaseNotes>
+		<copyright>Copyright 2014</copyright>
+		<tags>testable simulator simulatable mvvm event</tags>
+	</metadata>
+	<files>
+		<file src="..\bin\Debug\net20\Testable.Events.*" target="lib\net20" />
+		<file src="..\bin\Debug\net35\Testable.Events.*" target="lib\net35" />
+		<file src="..\bin\Debug\net45\Testable.Events.*" target="lib\net45" />
+		<file src="..\bin\Debug\portable-net45+sl5+wp8+windows8\Testable.Events.*" target="lib\portable-net45+sl5+wp8+windows8" />
+		<file src="..\bin\Debug\windows8\Testable.Events.*" target="lib\windows8\" />
+	</files>
+</package>
