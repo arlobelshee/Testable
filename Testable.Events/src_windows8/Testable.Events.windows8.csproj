@@ -7,19 +7,21 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02b4f4a6-5c53-4307-a12e-9b2104742ef2}</ProjectGuid>
+    <ProjectGuid>{02B4F4A6-5C53-4307-A12E-9B2104742EF2}</ProjectGuid>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\bin\Debug\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\Debug\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\Debug\windows8\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -28,7 +30,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\bin\Release\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\Release\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\Release\windows8\</IntermediateOutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,7 +38,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\bin\ARM\Debug\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\ARM\Debug\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\ARM\Debug\windows8\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -47,7 +49,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>..\bin\ARM\Release\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\ARM\Release\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\ARM\Release\windows8\</IntermediateOutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -60,7 +62,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\bin\x64\Debug\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\x64\Debug\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\x64\Debug\windows8\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -71,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>..\bin\x64\Release\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\x64\Release\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\x64\Release\windows8\</IntermediateOutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -84,7 +86,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\bin\x86\Debug\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\x86\Debug\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\x86\Debug\windows8\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -95,7 +97,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>..\bin\x86\Release\windows8\</OutputPath>
-		<IntermediateOutputPath>..\obj\x86\Release\windows8\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\obj\x86\Release\windows8\</IntermediateOutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -106,20 +108,32 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Compile Include="..\src_shared\**\*.cs">
+      <Link>%(RecursiveDir)%(Filename)</Link>
+    </Compile>
+    <Compile Include="..\src_windows8\**\*.cs">
+      <Link>%(RecursiveDir)%(Filename)</Link>
+    </Compile>
   </ItemGroup>
-	<ItemGroup>
-		<Compile Include="..\src_shared\**\*.cs">
-      <Link>%(RecursiveDir)%(Filename)</Link>
-		</Compile>
-		<Compile Include="..\src_windows8\**\*.cs">
-      <Link>%(RecursiveDir)%(Filename)</Link>
-		</Compile>
-	</ItemGroup>
+  <ItemGroup>
+    <Reference Include="Contract.Annotations">
+      <HintPath>..\..\packages\Contract.Annotations.8.2.1.0\lib\windows8\Contract.Annotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -127,5 +141,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>
