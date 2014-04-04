@@ -45,7 +45,10 @@
     <Compile Include="..\src_shared\**\*.cs">
       <Link>%(RecursiveDir)%(Filename)</Link>
     </Compile>
-    <Compile Include="**\*.cs" />
+    <Compile Include="Properties\AssemblyInfoExtra.cs" />
+    <Compile Include="..\net20\Lazy.cs">
+      <Link>Lazy.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
