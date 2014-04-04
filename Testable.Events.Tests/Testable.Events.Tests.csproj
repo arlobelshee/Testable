@@ -61,7 +61,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Testable.Events\src_net45\Testable.Events.net45.csproj">
+    <ProjectReference Include="..\Testable.Events\net45\Testable.Events.net45.csproj">
       <Project>{1333b324-9d7a-476e-b10c-ddc0b0177623}</Project>
       <Name>Testable.Events.net45</Name>
     </ProjectReference>

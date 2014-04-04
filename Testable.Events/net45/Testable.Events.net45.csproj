@@ -46,9 +46,7 @@
     <Compile Include="..\src_shared\**\*.cs">
       <Link>%(RecursiveDir)%(Filename)</Link>
     </Compile>
-    <Compile Include="..\src_net45\**\*.cs">
-      <Link>%(RecursiveDir)%(Filename)</Link>
-    </Compile>
+    <Compile Include="**\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

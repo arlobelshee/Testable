@@ -111,9 +111,7 @@
     <Compile Include="..\src_shared\**\*.cs">
       <Link>%(RecursiveDir)%(Filename)</Link>
     </Compile>
-    <Compile Include="..\src_windows8\**\*.cs">
-      <Link>%(RecursiveDir)%(Filename)</Link>
-    </Compile>
+    <Compile Include="**\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Contract.Annotations">
